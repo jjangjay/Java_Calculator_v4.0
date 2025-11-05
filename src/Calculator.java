@@ -2,6 +2,8 @@ public class Calculator {
     int num1;
     int num2;
     int result;
+    int base;
+    String resultNum;
 
     public void setNumbers(int num1, int num2) {
         this.num1 = num1;
@@ -37,5 +39,9 @@ public class Calculator {
 
     public void displayResult(String operator) {
         System.out.println(num1 + " " + operator + " " + num2 + " = " + result);
+    }
+
+    public void displayConversionNum() {
+        System.out.println(num1 + "의 " + num2 + "진수 값 = " + resultNum);
     }
 }

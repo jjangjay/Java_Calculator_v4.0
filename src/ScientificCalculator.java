@@ -10,13 +10,21 @@ public class ScientificCalculator extends AdvancedCalculator {
 
     private String base_conversion(int num, int base) {
         String strResult;
-        if (this.num1 == 0) {return "0";}
+        boolean isMinus = false;
+        if (num == 0) {return "0";}
+        if (num < 0) {
+            isMinus = true;
+            num *= -1;
+        }
+
         String digits = "0123456789abcdef";
         strResult = "";
         while (num != 0) {
             strResult = digits.charAt(num % base) + strResult;
             num /= base;
         }
+
+        if (isMinus) {return "-" + strResult;}
         return strResult;
     }
 

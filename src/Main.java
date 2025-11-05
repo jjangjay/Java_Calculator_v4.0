@@ -13,6 +13,11 @@ public class Main {
         ScientificCalculator sc = new ScientificCalculator();
         sc.setNumbers(5, 3);
         sc.power();
-        sc.displayResult("**");
+        sc.displayResult("^");
+
+        sc.setNumbers(40, 16);
+        sc.conversionNum();
+        sc.displayConversionNum();
+
     }
 }

@@ -15,6 +15,14 @@ public class Main {
         sc.power();
         sc.displayResult("^");
 
+        sc.setNumbers(40, 2);
+        sc.conversionNum();
+        sc.displayConversionNum();
+
+        sc.setNumbers(40, 8);
+        sc.conversionNum();
+        sc.displayConversionNum();
+
         sc.setNumbers(40, 16);
         sc.conversionNum();
         sc.displayConversionNum();

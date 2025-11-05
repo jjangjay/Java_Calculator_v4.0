@@ -12,6 +12,9 @@ public class ScientificCalculator extends AdvancedCalculator {
         if (this.num2 == 2) {
             this.resultNum = Integer.toBinaryString(this.num1);
         }
+        else if (this.num2 == 8) {
+            this.resultNum = Integer.toOctalString(this.num1);
+        }
         else if (this.num2 == 16){
             this.resultNum = Integer.toHexString(this.num1);
         }

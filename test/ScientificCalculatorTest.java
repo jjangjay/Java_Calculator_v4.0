@@ -21,7 +21,7 @@ class ScientificCalculatorTest {
 @Test
 void conversionNum() {
     String j;
-    for (int i =0; i<1000; i++) {
+    for (int i =-1000; i<1000; i++) {
         j = Integer.toString(i, 2);
         sc.setNumbers(i, 2);
         assertEquals(j, sc.conversionNum());

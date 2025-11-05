@@ -8,15 +8,27 @@ public class ScientificCalculator extends AdvancedCalculator {
         return this.result;
     }
 
+    private String base_conversion(int num, int base) {
+        String strResult;
+        if (this.num1 == 0) {return "0";}
+        String digits = "0123456789abcdef";
+        strResult = "";
+        while (num != 0) {
+            strResult = digits.charAt(num % base) + strResult;
+            num /= base;
+        }
+        return strResult;
+    }
+
     public String conversionNum() {
         if (this.num2 == 2) {
-            this.resultNum = Integer.toBinaryString(this.num1);
+            this.resultNum = base_conversion(this.num1, this.num2);
         }
         else if (this.num2 == 8) {
-            this.resultNum = Integer.toOctalString(this.num1);
+            this.resultNum = base_conversion(this.num1, this.num2);
         }
         else if (this.num2 == 16){
-            this.resultNum = Integer.toHexString(this.num1);
+            this.resultNum = base_conversion(this.num1, this.num2);
         }
         return this.resultNum;
     }
